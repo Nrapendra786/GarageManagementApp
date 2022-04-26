@@ -1,0 +1,71 @@
+<p>edit-education works!</p>
+<a href="#" routerLink="/educations/" class="btn btn-primary">Back</a>
+    <div class="container"></div>
+    
+   
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        
+        <div class="form-group">
+            <label for="educationId">Id:</label>
+            <input 
+                formControlName="educationId"
+                id="educationId" 
+                type="text"
+                class="form-control">
+        </div> 
+    
+        <div class="form-group">
+            <label for="isbn">Isbn:</label>
+            <input 
+                formControlName="isbn"
+                id="isbn" 
+                type="text"
+                class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input 
+                formControlName="title"
+                id="title" 
+                type="text" 
+                class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="author">Author:</label>
+            <input 
+                formControlName="author"
+                id="author" 
+                type="text" 
+                class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="shortDescription">ShortDescription:</label>
+            <input 
+                formControlName="shortDescription"
+                id="shortDescription" 
+                type="text" 
+                [(ngModel)]="educationModel.shortDescription"
+                class="form-control">
+        </div>
+        <div class="form-group">
+        <label for="nodeIdDropDownList">NodeIds:</label>
+        <select formControlName="nodeIds" id="nodeIdDropDownList">
+            <option [ngValue]="null" disabled>Select NodeIds</option>
+            <option *ngFor="let nodeId of educationModel.nodeIds" [ngValue]="educationModel.nodeIds">
+                {{educationModel.nodeIds}}
+            </option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Update</button>
+    
+    </form>   
+
+
+
+  
+        

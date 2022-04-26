@@ -1,0 +1,63 @@
+<div class="container">
+    <a href="#" routerLink="/educations" class="btn btn-primary">Back</a>
+     <form [formGroup]="form">
+        <mat-card>
+            <mat-card-header>
+              <mat-card-title>Create Education</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="full-width">
+                    <input formcontrolname="educationId" matInput placeholder="Id">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field class="full-width">
+                    <input formcontrolname="isbn" matInput placeholder="ISBN" required>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="full-width">
+                    <input formcontrolname="title" matInput placeholder="Title" >
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="full-width">
+                    <input formcontrolname="author" matInput placeholder="Author" required>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="full-width">
+                    <input formcontrolname="shortDescription" matInput placeholder="ShortDescription">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="full-width">
+                    <input formcontrolname="nodeIds" matInput placeholder="NodeIds">
+                  </mat-form-field>
+                </div>
+              </div>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" type="submit"  (click)="submit()">Submit</button>
+            </mat-card-actions>
+       </mat-card>
+    </form>
+</div>
+
+
+
+
+
+
+
+            

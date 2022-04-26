@@ -1,0 +1,26 @@
+<p>index-education works!</p>
+<div class="container">
+  
+
+    <a href="#" [routerLink]="['/educations/create']"  class="btn btn-success">Create New Education</a>
+
+    <table class="table table-bordered">
+      <tr>
+        <th>ID</th>
+        <th>ISBN</th>
+        <th>AUTHOR</th>
+        <th width="220px">Action</th>
+      </tr>
+      <tr *ngFor="let education of educations">
+        <td>{{ education.educationId }}</td>
+        <td>{{ education.isbn }}</td>
+        <td>{{ education.author }}</td>
+        <td>
+         
+          <a href="#" [routerLink]="['/educations/', education.educationId, 'view']" class="btn btn-info">View</a>
+          <a href="#" [routerLink]="['/educations/', education.educationId, 'edit']" class="btn btn-primary">Edit</a>
+          <button type="button" (click)="deletePost(education.educationId)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </table>
+  </div>

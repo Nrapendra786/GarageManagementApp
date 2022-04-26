@@ -1,0 +1,23 @@
+<p>view-education works!</p>
+
+<ng-container *ngIf="educationModel">
+        <div class="container">
+        <h1>View Post</h1>
+       
+
+        <a href="#" routerLink="/educations/" class="btn btn-primary">Back</a>
+        <br/>
+            <div>
+                <strong>ID:</strong>
+                <p>{{ educationModel.educationId }}</p>
+            </div> 
+            <div>
+                <strong>ISBN:</strong>
+                <p>{{ educationModel.isbn }}</p>
+            </div>
+            <div>
+                <strong>Author:</strong>
+                <p>{{ educationModel.author }}</p>
+            </div>
+        </div>
+    </ng-container>
